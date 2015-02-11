@@ -403,7 +403,11 @@ static void cpufreq_impulse_timer(unsigned long data)
 	loadadjfreq = (unsigned int)cputime_speedadj * 100;
 	cpu_load = loadadjfreq / pcpu->policy->cur;
 	boosted = boost_val || now < boostpulse_endtime ||
+<<<<<<< HEAD
 		  cpu_load >= go_hispeed_load;
+=======
+			cpu_load >= go_hispeed_load;
+>>>>>>> d3dd294... cpufreq: impulse: added the new governor from @neobuddy89 kernel
 	this_hispeed_freq = max(hispeed_freq, pcpu->policy->min);
 
 	if (cpu_load <= go_lowspeed_load && !boost_val) {
@@ -1363,7 +1367,11 @@ static int cpufreq_governor_impulse(struct cpufreq_policy *policy,
 	return 0;
 }
 
+<<<<<<< HEAD
 #ifndef CONFIG_CPU_FREQ_DEFAULT_GOV_IMPULSE
+=======
+#ifndef CONFIG_CPU_FREQ_DEFAULT_GOV_impulse
+>>>>>>> d3dd294... cpufreq: impulse: added the new governor from @neobuddy89 kernel
 static
 #endif
 struct cpufreq_governor cpufreq_gov_impulse = {
@@ -1415,7 +1423,11 @@ static int __init cpufreq_impulse_init(void)
 	return cpufreq_register_governor(&cpufreq_gov_impulse);
 }
 
+<<<<<<< HEAD
 #ifdef CONFIG_CPU_FREQ_DEFAULT_GOV_IMPULSE
+=======
+#ifdef CONFIG_CPU_FREQ_DEFAULT_GOV_impulse
+>>>>>>> d3dd294... cpufreq: impulse: added the new governor from @neobuddy89 kernel
 fs_initcall(cpufreq_impulse_init);
 #else
 module_init(cpufreq_impulse_init);
