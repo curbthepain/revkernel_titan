@@ -115,9 +115,6 @@ config CPU_FREQ_DEFAULT_GOV_SMARTMAX
         help
           Use the CPUFreq governor 'smartmax' as default
 
-config CPU_FREQ_DEFAULT_GOV_PEGASUSQ
-	bool "pegasusq"
-	select CPU_FREQ_GOV_PEGASUSQ
 
 config CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE
 	bool "intelliactive"
@@ -347,11 +344,14 @@ config CPU_FREQ_GOV_INTELLIMM
 
           If in doubt, say N.
 
+<<<<<<< HEAD
 config CPU_FREQ_GOV_PEGASUSQ
 	tristate "'pegasusq' cpufreq policy governor"
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 1e036b6... remove pegasusq and enable intellidemand
 config CPU_FREQ_GOV_BADASS
 	tristate "'badass' cpufreq policy governor"
 	select CPU_FREQ_TABLE
