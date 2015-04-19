@@ -148,10 +148,6 @@ config CPU_FREQ_DEFAULT_GOV_IMPULSE
 	help
 	  Use the CPUFreq governor 'impulse' as default.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b3eab40... cpufreq: Add awesome governors
 config CPU_FREQ_DEFAULT_GOV_INTELLIMM
         bool "intelliminmax"
         select CPU_FREQ_GOV_INTELLIMM
@@ -189,7 +185,6 @@ config CPU_FREQ_DEFAULT_GOV_IMPULSE
 	help
 	  Use the CPUFreq governor 'interactive' as default.
 
-<<<<<<< HEAD
 config CPU_FREQ_DEFAULT_GOV_INTELLIDEMAND
         bool "intellidemand"
         select CPU_FREQ_GOV_INTELLIDEMAND
@@ -206,10 +201,6 @@ config CPU_FREQ_DEFAULT_GOV_INTELLIACTIVE
           loading your cpufreq low-level hardware driver, using the
           'interactive' governor for latency-sensitive workloads.
 
-=======
->>>>>>> d3dd294... cpufreq: impulse: added the new governor from @neobuddy89 kernel
-=======
->>>>>>> b3eab40... cpufreq: Add awesome governors
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -416,8 +407,6 @@ config CPU_FREQ_GOV_IMPULSE
 	help
 	  'impulse' - This driver adds a dynamic cpufreq policy governor
 	  designed for optimized balance between power and performance.
-<<<<<<< HEAD
-=======
 
 	  If in doubt, say N.
 
@@ -425,9 +414,6 @@ menu "x86 CPU frequency scaling drivers"
 depends on X86
 source "drivers/cpufreq/Kconfig.x86"
 endmenu
->>>>>>> d3dd294... cpufreq: impulse: added the new governor from @neobuddy89 kernel
-
-	  If in doubt, say N.
 
 config CPU_FREQ_GOV_INTELLIDEMAND
         tristate "'intellidemand' cpufreq policy governor"
